@@ -8,5 +8,5 @@ EXPOSE 9443
 VOLUME /var/run/docker.sock
 VOLUME /data
 
-# Set the default command to run Portainer
-CMD ["portainer"]
+# Set the correct command to run Portainer
+CMD ["/portainer", "--admin-password-file", "/data/portainer_password"]
